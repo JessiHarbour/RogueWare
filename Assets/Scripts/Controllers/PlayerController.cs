@@ -62,16 +62,20 @@ namespace Controllers
             if (GetKeyUp(W)) {_downW = false;}
             if (GetKeyUp(S)) {_downS = false;}
             if (GetKeyUp(D)) {_downD = false;}
-        
+            
+            // set move animation based on player velocity
+            _animator.SetFloat("input x", _rigidbody2D.velocity.x);
+            _animator.SetFloat("input y", _rigidbody2D.velocity.y);
+            
             // The below line starts the Animator if the Player is pressing buttons (remember the bools?)
-            if (!_downA && !_downW && !_downS && !_downD)
-            {
-                _animator.enabled = false;
-            }
-            else
-            {
-                _animator.enabled = true;
-            }
+            // if (!_downA && !_downW && !_downS && !_downD)
+            // {
+            //     _animator.enabled = false;
+            // }
+            // else
+            // {
+            //     _animator.enabled = true;
+            // }
 
             // These lines control the direction of movement
             float horizontal = GetAxis("HorizontalMove");
