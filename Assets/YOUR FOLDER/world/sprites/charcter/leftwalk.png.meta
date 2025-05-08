@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,10 +116,10 @@ TextureImporter:
       name: leftwalk_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 183
-        width: 14
-        height: 17
+        x: 0
+        y: 184
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +137,10 @@ TextureImporter:
       name: leftwalk_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 183
-        width: 14
-        height: 17
+        x: 16
+        y: 184
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,10 +158,10 @@ TextureImporter:
       name: leftwalk_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 183
-        width: 14
-        height: 17
+        x: 32
+        y: 184
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,9 +179,9 @@ TextureImporter:
       name: leftwalk_3
       rect:
         serializedVersion: 2
-        x: 49
-        y: 183
-        width: 14
+        x: 48
+        y: 184
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,10 +200,10 @@ TextureImporter:
       name: leftwalk_4
       rect:
         serializedVersion: 2
-        x: 65
-        y: 183
-        width: 14
-        height: 17
+        x: 64
+        y: 184
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: leftwalk_5
       rect:
         serializedVersion: 2
-        x: 81
-        y: 183
-        width: 14
-        height: 17
+        x: 80
+        y: 184
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,14 +241,20 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 07e362b769f6eea40a61d1726f3451ad
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      leftwalk_0: 4807585400952270499
+      leftwalk_1: -9186372597638787359
+      leftwalk_2: 6719257063028236944
+      leftwalk_3: -1954806922668193450
+      leftwalk_4: -4558300923123605278
+      leftwalk_5: 4158017125307391168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
