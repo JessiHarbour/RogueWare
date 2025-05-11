@@ -17,7 +17,6 @@ namespace UI
         
         //MMFs
         public MMF_Player levelInfo;
-        public MMF_Player controlInfo;
 
         // Timer Info
         private bool _infoTriggered;
@@ -46,7 +45,6 @@ namespace UI
             _timer += Time.deltaTime;
             if (_timer >= timeLimit)
             {
-                controlInfo.PlayFeedbacks();
                 _infoTriggered = false;
             }
         }

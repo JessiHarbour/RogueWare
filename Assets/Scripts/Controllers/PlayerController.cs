@@ -1,4 +1,5 @@
 using UI;
+
 using UnityEngine;
 using static UnityEngine.Input;
 using static UnityEngine.KeyCode;
@@ -64,8 +65,17 @@ namespace Controllers
             if (GetKeyUp(D)) {_downD = false;}
             
             // set move animation based on player velocity
-            _animator.SetFloat("input x", _rigidbody2D.velocity.x);
-            _animator.SetFloat("input y", _rigidbody2D.velocity.y);
+            float playerXVol = _rigidbody2D.velocity.x;
+            float playerYVol = _rigidbody2D.velocity.y;
+            bool isPlayerMoving = playerXVol + playerYVol != 0;
+            _animator.SetBool("isWalking", isPlayerMoving);
+            if (isPlayerMoving) 
+            {
+                _animator.SetFloat("input x", playerXVol);
+                _animator.SetFloat("input y", playerYVol);
+            }
+            
+            
             
             // The below line starts the Animator if the Player is pressing buttons (remember the bools?)
             // if (!_downA && !_downW && !_downS && !_downD)

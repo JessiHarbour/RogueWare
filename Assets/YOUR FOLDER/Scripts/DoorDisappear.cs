@@ -5,6 +5,8 @@ public class DoorDisappear : MonoBehaviour
 {
     [SerializeField] private float reappearDelay = 1f;      // Time disappearing before reappearing
     [SerializeField] private float disappearDelay = 1f;     // Time disappears after interaction
+    
+    [SerializeField] private bool doorNeedsKey = false;
 
     private Collider2D solidCollider;     // collider for blocking
     private SpriteRenderer doorSprite;
@@ -39,7 +41,18 @@ public class DoorDisappear : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (!doorNeedsKey)
+            {
+                StartCoroutine(DelayedDoorDisappear());
+                return;
+            }
+            
+            
+            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
+            if (playerInventory == null) return;
+            if (!playerInventory.hasCoin) return;
             StartCoroutine(DelayedDoorDisappear());
+            
         }
     }
 
