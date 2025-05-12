@@ -1,19 +1,20 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class DoorDisappear : MonoBehaviour
 {
-    [SerializeField] private float reappearDelay = 1f;      // Time disappearing before reappearing
-    [SerializeField] private float disappearDelay = 1f;     // Time disappears after interaction
+    [SerializeField] private float reappearDelay = 1f;    
+    [SerializeField] private float disappearDelay = 1f;   
+    [SerializeField] private bool doorNeedsKey = false;   // key
     
-    [SerializeField] private bool doorNeedsKey = false;
+    [SerializeField] private bool requiresButtonPress = false; //button
+    [SerializeField] private ButtonSwitch linkedButton;        
 
-    private Collider2D solidCollider;     // collider for blocking
-    private SpriteRenderer doorSprite;
+    private Collider2D solidCollider;    
+    private SpriteRenderer doorSprite;   
 
     void Start()
     {
-        // Get the solid collider 
         Collider2D[] colliders = GetComponents<Collider2D>();
         foreach (Collider2D col in colliders)
         {
@@ -28,43 +29,52 @@ public class DoorDisappear : MonoBehaviour
 
         if (solidCollider == null)
         {
-            Debug.LogWarning("No solid collider found on the door!");
+         
         }
 
         if (doorSprite == null)
         {
-            Debug.LogWarning("No SpriteRenderer found on the door!");
+          
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+
+        // check if the button is pressed
+        if (requiresButtonPress)
         {
-            if (!doorNeedsKey)
+            if (linkedButton == null || !linkedButton.isPressed)
             {
-                StartCoroutine(DelayedDoorDisappear());
-                return;
+                
+                return; 
             }
-            
-            
-            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
-            if (playerInventory == null) return;
-            if (!playerInventory.hasCoin) return;
-            StartCoroutine(DelayedDoorDisappear());
-            
         }
+
+        // check for key
+        if (doorNeedsKey)
+        {
+            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
+            if (playerInventory == null || !playerInventory.hasCoin)
+            {
+                return; 
+            }
+        }
+
+        // If no button press or key needed
+        StartCoroutine(DelayedDoorDisappear());
     }
 
     private IEnumerator DelayedDoorDisappear()
     {
-        // Wait before disappearing
+        // Wait disappearing
         yield return new WaitForSeconds(disappearDelay);
 
         if (solidCollider != null) solidCollider.enabled = false;
         if (doorSprite != null) doorSprite.enabled = false;
 
-        // Wait before reappearing
+        // Wait reappearing
         yield return new WaitForSeconds(reappearDelay);
 
         if (solidCollider != null) solidCollider.enabled = true;
