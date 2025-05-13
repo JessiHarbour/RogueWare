@@ -8,6 +8,8 @@ TagManager:
   - Interactable
   - coin
   - Key
+  - water
+  - Water
   layers:
   - Default
   - TransparentFX

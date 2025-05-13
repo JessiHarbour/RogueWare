@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae15985bc8eec148bd05e25e245ee92, type: 3}
   m_Name: ScriptObject
   m_EditorClassIdentifier: 
-  speakerName: Wizard
-  speakerText: It is I! THE WIZARD!
+  speakerName: Guard
+  speakerText: Oh, you had quite the nasty fall

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae15985bc8eec148bd05e25e245ee92, type: 3}
   m_Name: ScriptObject 1
   m_EditorClassIdentifier: 
-  speakerName: Wizard
-  speakerText: And who is this, I wonder?
+  speakerName: Guard
+  speakerText: You dont happen to have seen my cookie up there did you?

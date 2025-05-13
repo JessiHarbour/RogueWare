@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class DoorDisappear : MonoBehaviour
@@ -12,6 +13,9 @@ public class DoorDisappear : MonoBehaviour
 
     private Collider2D solidCollider;    
     private SpriteRenderer doorSprite;   
+    
+    [SerializeField] private GameObject textGameObject;
+    [SerializeField] private TextMeshProUGUI textMeshPro;
 
     void Start()
     {
@@ -58,6 +62,10 @@ public class DoorDisappear : MonoBehaviour
             PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
             if (playerInventory == null || !playerInventory.hasCoin)
             {
+
+                textGameObject.SetActive(true);
+                textMeshPro.text = "You need the coin to open the door";
+                
                 return; 
             }
         }
@@ -80,4 +88,14 @@ public class DoorDisappear : MonoBehaviour
         if (solidCollider != null) solidCollider.enabled = true;
         if (doorSprite != null) doorSprite.enabled = true;
     }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            textGameObject.SetActive(false);
+        }
+        
+    }
+
 }

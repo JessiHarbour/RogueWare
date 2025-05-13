@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae15985bc8eec148bd05e25e245ee92, type: 3}
   m_Name: ScriptObject 2
   m_EditorClassIdentifier: 
-  speakerName: Wizard
-  speakerText: Just a lost little Knight?
+  speakerName: Guard
+  speakerText: I dont remeber where i put it.....
