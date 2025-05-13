@@ -975,7 +975,7 @@ Transform:
   m_GameObject: {fileID: 89786229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51, y: 1.03, z: 0}
+  m_LocalPosition: {x: -0.42, y: 0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11180,7 +11180,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -2106413203328263691, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
       - {fileID: 327179433725653678, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 17, y: -3, z: 0}
@@ -11189,7 +11189,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -2106413203328263691, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
       - {fileID: 327179433725653678, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 18, y: -3, z: 0}
@@ -11207,7 +11207,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -2106413203328263691, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
       - {fileID: 327179433725653678, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 18, y: -1, z: 0}
@@ -11243,7 +11243,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -2106413203328263691, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
       - {fileID: 327179433725653678, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 17, y: 1, z: 0}
@@ -11360,7 +11360,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -2106413203328263691, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
       - {fileID: 327179433725653678, guid: 76fb02f069efed042a49d7ea5f1b04f5, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:

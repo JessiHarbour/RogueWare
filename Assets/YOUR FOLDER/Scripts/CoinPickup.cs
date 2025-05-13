@@ -9,12 +9,12 @@ public class CoinPickup : MonoBehaviour
        
         if (other.CompareTag("Player"))
         {
-            // Get the Inventory 
+            //  chec k inventory 
             PlayerInventory inventory = other.GetComponent<PlayerInventory>();
             
             if (inventory != null)
             {
-                // Set the hasCoin to true when the player picks up the coin
+                // Set the hasCoin to true
                 inventory.hasCoin = true;
                 
                 Destroy(gameObject);
